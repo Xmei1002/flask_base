@@ -38,9 +38,6 @@ def send_sms(mobile):
         # 'statusCallback': statusCallBack,
         'signature': signature 
     }).encode('ascii')
-    print("=====")
-    print(formData)
-
     sig = signer.Signer()
     sig.Key = APP_KEY
     sig.Secret = APP_SECRET

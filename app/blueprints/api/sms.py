@@ -14,7 +14,6 @@ def send_sms_hw():
   发送短信
   """
   schema = HWSMSSchema()
-  data = request.json
   data = schema.load(request.json)
   mobile = data.get('mobile')
   resp,code = hwsms_service.send_sms(mobile)
